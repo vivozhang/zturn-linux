@@ -1,0 +1,15 @@
+menuconfig MYIR_SII902X
+	bool "MYIR sii902x HDMI driver support"
+	depends on FB
+	default y
+	help
+	  Choose this option if you want to use the MYIR sii902x hdmi
+	  for video output.
+	  
+config SII902X_EDID_READING
+	bool "Auto set videomode by reading monitor EDID (untested)"
+	depends on MYIR_SII902X
+	default n
+	help
+	  Choose this to enable videomode auto set by reading
+	  monitor EDID. Use system default videomode if unchecked.
